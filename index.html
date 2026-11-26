@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Opuscula — ZZEMM Illustration Showcase</title>
+  <meta name="description" content="Opuscula illustration showcase featuring ZZEMM — an original digital illustration created in Procreate on iPad around 24 February 2021." />
+  <link rel="icon" type="image/svg+xml" href="assets/logo.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Funnel+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="site-shell">
+    <!-- Animated Starfield Canvas (AstralGames style) -->
+    <canvas id="starfield" class="starfield-canvas" aria-hidden="true"></canvas>
+
+    <!-- Sticky Glass Header -->
+    <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
+      <div class="nav-inner">
+        <div class="nav-bar">
+          <a href="#top" class="brand-link press" aria-label="Opuscula home">
+            <img src="assets/logo.svg" alt="" width="40" height="40" class="brand-logo" />
+            <span class="brand-name">Opuscula</span>
+          </a>
+
+          <div class="nav-links" id="nav-links">
+            <span class="nav-pill" id="nav-pill" aria-hidden="true"></span>
+            <a href="#showcase" class="nav-link is-active" data-nav-link>Showcase</a>
+            <a href="#about" class="nav-link" data-nav-link>About ZZEMM</a>
+            <a href="#upcoming-card" class="nav-link" data-nav-link>Upcoming</a>
+            <a href="#details" class="nav-link" data-nav-link>Details</a>
+          </div>
+
+          <div class="nav-actions">
+            <span class="creator-chip" title="Signature on artwork">
+              <span class="creator-dot" aria-hidden="true"></span>
+              @hzeezee_
+            </span>
+            <button type="button" class="nav-cta press" id="nav-inspect-btn" aria-label="Inspect ZZEMM full artwork">
+              <span>Inspect Art</span>
+              <svg width="14" height="14" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true">
+                <path d="M216,48V96a8,8,0,0,1-16,0V67.31l-50.34,50.35a8,8,0,0,1-11.32-11.32L188.69,56H160a8,8,0,0,1,0-16h48A8,8,0,0,1,216,48ZM106.34,138.34,56,188.69V160a8,8,0,0,0-16,0v48a8,8,0,0,0,8,8H96a8,8,0,0,0,0-16H67.31l50.35-50.34a8,8,0,0,0-11.32-11.32Z"/>
+              </svg>
+            </button>
+            <button type="button" class="mobile-menu-btn press" id="mobile-menu-btn" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
+              <svg class="menu-icon menu-icon-open" width="20" height="20" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true">
+                <path d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128ZM40,72H216a8,8,0,0,0,0-16H40a8,8,0,0,0,0,16ZM216,184H40a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16Z"/>
+              </svg>
+              <svg class="menu-icon menu-icon-close" width="20" height="20" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true">
+                <path d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile Disclosure Menu -->
+      <div class="mobile-disclosure" id="mobile-menu" data-open="false">
+        <div class="mobile-disclosure-inner">
+          <div class="mobile-disclosure-content">
+            <a href="#showcase" class="mobile-nav-link">Showcase</a>
+            <a href="#about" class="mobile-nav-link">About ZZEMM</a>
+            <a href="#upcoming-card" class="mobile-nav-link">Upcoming</a>
+            <a href="#details" class="mobile-nav-link">Details</a>
+            <div class="mobile-meta-row">
+              <span class="tag-pill">Procreate · iPad</span>
+              <span class="tag-pill">24 Feb 2021</span>
+              <span class="tag-pill">723 × 1024</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scroll Progress Hairline -->
+      <div id="nav-progress" class="nav-progress" aria-hidden="true"></div>
+    </nav>
+
+    <!-- Ambient Hero Intro -->
+    <header id="top" class="hero-section">
+      <div class="hero-glow" aria-hidden="true"></div>
+      <div class="hero-container">
+        <div class="hero-eyebrow">
+          <span class="eyebrow-star" aria-hidden="true">✦</span>
+          <span>Original Digital Illustration Showcase</span>
+          <span class="eyebrow-star" aria-hidden="true">✦</span>
+        </div>
+        <h1 class="hero-title">ZZEMM</h1>
+        <p class="hero-subtitle">
+          A hand-drawn monochrome street illustration made in Procreate on iPad during the COVID-19 pandemic — presented in a cosmic dark gallery.
+        </p>
+        <div class="hero-cta-row">
+          <button type="button" class="btn-primary press" id="hero-inspect-btn">
+            <span>Inspect Artwork</span>
+            <span class="btn-circle-icon" aria-hidden="true">
+              <svg width="15" height="15" viewBox="0 0 256 256" fill="currentColor">
+                <path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/>
+              </svg>
+            </span>
+          </button>
+          <a href="#about" class="btn-ghost press">
+            <span>Read Story</span>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main id="main-content" class="main-content">
+      <!-- Showcase Grid Section -->
+      <section id="showcase" class="section-block">
+        <div class="section-header group-header">
+          <div class="header-line"></div>
+          <h2 class="section-title-wrap">
+            <span class="header-star" aria-hidden="true">✦</span>
+            <span class="section-title">Illustration Gallery</span>
+            <span class="header-star" aria-hidden="true">✦</span>
+          </h2>
+          <div class="header-line"></div>
+        </div>
+
+        <div class="showcase-grid">
+          <!-- Card 1: ZZEMM (Exact 723x1024 aspect ratio container) -->
+          <article class="art-card art-card--featured" id="zzemm-card">
+            <button
+              type="button"
+              class="art-card-trigger"
+              id="open-lightbox-btn"
+              aria-label="Open ZZEMM illustration in fullscreen view"
+            >
+              <div class="art-card-media">
+                <img
+                  src="assets/zzemm.jpg"
+                  width="723"
+                  height="1024"
+                  alt="ZZEMM — monochrome digital street-art illustration drawn in Procreate on iPad by @hzeezee_"
+                  class="art-image"
+                  loading="eager"
+                  decoding="async"
+                />
+
+                <!-- Hover-only subtle pills so the artwork stays 100% unobstructed at rest -->
+                <div class="card-top-badges card-hover-reveal" aria-hidden="true">
+                  <span class="frosted-pill">
+                    <svg width="13" height="13" viewBox="0 0 256 256" fill="currentColor" class="pill-icon-amber">
+                      <path d="M236.8,188.09,149.35,36.22a24.76,24.76,0,0,0-42.7,0L19.2,188.09a23.51,23.51,0,0,0,0,23.72A24.35,24.35,0,0,0,40.55,224h174.9a24.35,24.35,0,0,0,21.33-12.19A23.51,23.51,0,0,0,236.8,188.09Z" opacity="0"/>
+                      <path d="M197.58,129.06l-51.92-19.22L126.44,57.92a8,8,0,0,0-15,0L92.22,109.84,40.3,129.06a8,8,0,0,0,0,15l51.92,19.22,19.22,51.92a8,8,0,0,0,15,0l19.22-51.92,51.92-19.22a8,8,0,0,0,0-15Z"/>
+                    </svg>
+                    <span>Original Work</span>
+                  </span>
+                  <span class="frosted-pill frosted-pill--icon" title="View fullscreen">
+                    <svg width="13" height="13" viewBox="0 0 256 256" fill="currentColor">
+                      <path d="M216,48V96a8,8,0,0,1-16,0V67.31l-50.34,50.35a8,8,0,0,1-11.32-11.32L188.69,56H160a8,8,0,0,1,0-16h48A8,8,0,0,1,216,48ZM106.34,138.34,56,188.69V160a8,8,0,0,0-16,0v48a8,8,0,0,0,8,8H96a8,8,0,0,0,0-16H67.31l50.35-50.34a8,8,0,0,0-11.32-11.32Z"/>
+                    </svg>
+                  </span>
+                </div>
+              </div>
+
+              <div class="art-card-footer">
+                <div class="art-card-footer-top">
+                  <h3 class="art-card-title">ZZEMM</h3>
+                  <span class="status-badge status-badge--published">Showcase</span>
+                </div>
+                <div class="art-card-meta">
+                  <span>Procreate · iPad</span>
+                  <span class="meta-dot" aria-hidden="true">·</span>
+                  <span>24 Feb 2021</span>
+                  <span class="meta-dot" aria-hidden="true">·</span>
+                  <span class="mono-dim">723 × 1024</span>
+                </div>
+              </div>
+            </button>
+          </article>
+
+          <!-- Card 2: Upcoming Empty Card (Exact same 723x1024 portrait dimensions) -->
+          <article class="art-card art-card--upcoming" id="upcoming-card" aria-label="Upcoming illustration slot">
+            <div class="art-card-media art-card-media--upcoming skeleton">
+              <div class="upcoming-ambient" aria-hidden="true"></div>
+              <div class="upcoming-dashed-frame" aria-hidden="true"></div>
+
+              <!-- AstralGames Emerald Upcoming Pill Badge -->
+              <div class="card-top-badges">
+                <span class="upcoming-pill">
+                  <svg width="13" height="13" viewBox="0 0 256 256" fill="currentColor" class="upcoming-pill-icon" aria-hidden="true">
+                    <path d="M208,28H188V24a12,12,0,0,0-24,0v4H92V24a12,12,0,0,0-24,0v4H48A20,20,0,0,0,28,48V208a20,20,0,0,0,20,20H208a20,20,0,0,0,20-20V48A20,20,0,0,0,208,28ZM68,52a12,12,0,0,0,24,0h72a12,12,0,0,0,24,0h16V76H52V52ZM52,204V100H204V204Z"/>
+                  </svg>
+                  <span class="upcoming-pill-text">Upcoming</span>
+                </span>
+                <span class="frosted-pill mono-dim">Slot 02</span>
+              </div>
+
+              <div class="upcoming-center">
+                <div class="upcoming-orb" aria-hidden="true">
+                  <svg width="26" height="26" viewBox="0 0 256 256" fill="currentColor">
+                    <path d="M128,40a88,88,0,1,0,88,88A88.1,88.1,0,0,0,128,40Zm0,160a72,72,0,1,1,72-72A72.08,72.08,0,0,1,128,200Zm40-72a8,8,0,0,1-8,8H128a8,8,0,0,1-8-8V88a8,8,0,0,1,16,0v32h24A8,8,0,0,1,168,128Z"/>
+                  </svg>
+                </div>
+                <p class="upcoming-kicker">In the Queue</p>
+                <h3 class="upcoming-heading">Upcoming Illustration</h3>
+                <p class="upcoming-copy">
+                  This gallery slot is reserved for the next original artwork release.
+                </p>
+              </div>
+            </div>
+
+            <div class="art-card-footer">
+              <div class="art-card-footer-top">
+                <h3 class="art-card-title art-card-title--muted">Untitled Artwork</h3>
+                <span class="status-badge status-badge--upcoming">Upcoming</span>
+              </div>
+              <div class="art-card-meta">
+                <span>Queued Release</span>
+                <span class="meta-dot" aria-hidden="true">·</span>
+                <span>TBA</span>
+                <span class="meta-dot" aria-hidden="true">·</span>
+                <span class="mono-dim">723 × 1024</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- About & Process Section (AstralGames detail grid layout) -->
+      <section id="about" class="section-block reveal">
+        <div class="section-header group-header">
+          <div class="header-line"></div>
+          <h2 class="section-title-wrap">
+            <span class="header-star" aria-hidden="true">✦</span>
+            <span class="section-title">About ZZEMM</span>
+            <span class="header-star" aria-hidden="true">✦</span>
+          </h2>
+          <div class="header-line"></div>
+        </div>
+
+        <div class="detail-grid" id="details">
+          <!-- Main Story Card -->
+          <div class="glass-card-static story-card">
+            <div class="story-header">
+              <div>
+                <span class="story-kicker">Featured Work</span>
+                <h3 class="story-title">ZZEMM</h3>
+              </div>
+              <div class="tag-list">
+                <span class="tag-pill">Artistic Work</span>
+                <span class="tag-pill">Digital Illustration</span>
+                <span class="tag-pill">Procreate</span>
+                <span class="tag-pill">Monochrome</span>
+              </div>
+            </div>
+
+            <div class="story-blocks">
+              <div class="story-block">
+                <h4 class="story-label">
+                  <span class="label-accent" aria-hidden="true">✦</span>
+                  About the Artwork
+                </h4>
+                <p class="story-text">
+                  I drew ZZEMM for a friend who goes by ZEM. During the COVID-19 pandemic, I spent some of my free time drawing, and we often shared our artwork with each other. This illustration came out of that time.
+                </p>
+              </div>
+
+              <div class="story-divider"></div>
+
+              <div class="story-block">
+                <h4 class="story-label">
+                  <span class="label-accent" aria-hidden="true">✦</span>
+                  How I Made It
+                </h4>
+                <p class="story-text">
+                  I drew ZZEMM digitally in Procreate on my iPad around 24 February 2021, during the COVID-19 pandemic.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Sidebar Metadata Card -->
+          <aside class="glass-card-static meta-card" aria-label="Artwork specifications">
+            <h3 class="meta-heading">Artwork Specifications</h3>
+            <dl class="meta-list">
+              <div class="meta-row">
+                <dt>Title</dt>
+                <dd>ZZEMM</dd>
+              </div>
+              <div class="meta-row">
+                <dt>Artist Signature</dt>
+                <dd class="mono-text">@hzeezee_</dd>
+              </div>
+              <div class="meta-row">
+                <dt>Category</dt>
+                <dd>Artistic Work</dd>
+              </div>
+              <div class="meta-row">
+                <dt>Tool &amp; Device</dt>
+                <dd>Procreate · iPad</dd>
+              </div>
+              <div class="meta-row">
+                <dt>Creation Date</dt>
+                <dd>c. 24 February 2021</dd>
+              </div>
+              <div class="meta-row">
+                <dt>Dimensions</dt>
+                <dd class="mono-text">723 × 1024 px</dd>
+              </div>
+              <div class="meta-row">
+                <dt>Gallery Status</dt>
+                <dd><span class="inline-status-dot"></span> Published</dd>
+              </div>
+            </dl>
+
+            <div class="meta-actions">
+              <button type="button" class="btn-primary btn-full press" id="sidebar-inspect-btn">
+                <span>View Full Resolution</span>
+                <span class="btn-circle-icon" aria-hidden="true">
+                  <svg width="14" height="14" viewBox="0 0 256 256" fill="currentColor">
+                    <path d="M216,48V96a8,8,0,0,1-16,0V67.31l-50.34,50.35a8,8,0,0,1-11.32-11.32L188.69,56H160a8,8,0,0,1,0-16h48A8,8,0,0,1,216,48ZM106.34,138.34,56,188.69V160a8,8,0,0,0-16,0v48a8,8,0,0,0,8,8H96a8,8,0,0,0,0-16H67.31l50.35-50.34a8,8,0,0,0-11.32-11.32Z"/>
+                  </svg>
+                </span>
+              </button>
+              <a href="#showcase" class="btn-secondary btn-full press">Back to Cards</a>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <!-- Bottom Callout Banner (AstralGames CTA Card style) -->
+      <section class="callout-wrap reveal" aria-label="Upcoming works notice">
+        <div class="callout-aura" aria-hidden="true"></div>
+        <div class="glass-card-static callout-card">
+          <div class="callout-glow-tr" aria-hidden="true"></div>
+          <div class="callout-glow-bl" aria-hidden="true"></div>
+          <div class="callout-copy">
+            <h2 class="callout-title">More Illustrations in Queue</h2>
+            <p class="callout-text">
+              Opuscula highlights original personal artwork starting with ZZEMM. Additional illustrations will appear in the upcoming slot as new pieces are curated.
+            </p>
+          </div>
+          <div class="callout-actions">
+            <a href="#upcoming-card" class="btn-primary press">
+              <span>See Upcoming Slot</span>
+              <span class="btn-circle-icon" aria-hidden="true">
+                <svg width="14" height="14" viewBox="0 0 256 256" fill="currentColor">
+                  <path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/>
+                </svg>
+              </span>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer (AstralGames style) -->
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div class="footer-pills">
+          <span class="footer-pill">Opuscula Showcase</span>
+          <span class="footer-sep" aria-hidden="true">•</span>
+          <span class="footer-pill">ZZEMM (2021)</span>
+          <span class="footer-sep" aria-hidden="true">•</span>
+          <span class="footer-pill">Procreate on iPad</span>
+        </div>
+        <p class="footer-copy">© 2026 Opuscula · Original Illustration by @hzeezee_</p>
+      </div>
+    </footer>
+
+    <!-- Floating Back to Top Button -->
+    <button
+      type="button"
+      id="back-to-top"
+      class="back-to-top"
+      aria-label="Back to top"
+      title="Back to top"
+    >
+      <svg width="20" height="20" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true">
+        <path d="M205.66,117.66a8,8,0,0,1-11.32,0L136,59.31V216a8,8,0,0,1-16,0V59.31L61.66,117.66a8,8,0,0,1-11.32-11.32l72-72a8,8,0,0,1,11.32,0l72,72A8,8,0,0,1,205.66,117.66Z"/>
+      </svg>
+    </button>
+  </div>
+
+  <!-- Fullscreen Artwork Lightbox Modal -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-labelledby="lightbox-title" hidden>
+    <div class="lightbox-backdrop" data-close-lightbox></div>
+    <div class="lightbox-panel">
+      <div class="lightbox-header">
+        <div>
+          <h2 id="lightbox-title" class="lightbox-title">ZZEMM</h2>
+          <p class="lightbox-meta">Procreate on iPad · c. 24 February 2021 · 723 × 1024 px</p>
+        </div>
+        <button type="button" class="lightbox-close press" id="close-lightbox-btn" aria-label="Close fullscreen view">
+          <svg width="18" height="18" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true">
+            <path d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"/>
+          </svg>
+        </button>
+      </div>
+      <div class="lightbox-media-wrap">
+        <img
+          src="assets/zzemm.jpg"
+          width="723"
+          height="1024"
+          alt="ZZEMM — full-resolution original digital illustration"
+          class="lightbox-image"
+        />
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

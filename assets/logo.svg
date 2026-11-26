@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" fill="none">
+  <defs>
+    <linearGradient id="astralGrad" x1="10" y1="8" x2="54" y2="56" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#e9f0fb"/>
+      <stop offset="55%" stop-color="#8daeec"/>
+      <stop offset="100%" stop-color="#5183e1"/>
+    </linearGradient>
+  </defs>
+  <!-- Orbital crescent ring -->
+  <path d="M47.5 19.5C43.6 13.8 37.2 10 30 10C18.4 10 9 19.4 9 31C9 42.6 18.4 52 30 52C39.2 52 47 46 49.8 37.7" stroke="url(#astralGrad)" stroke-width="4.2" stroke-linecap="round"/>
+  <!-- Stylized star / pen-nib center -->
+  <path d="M35.5 17L38.4 26.6L48 29.5L38.4 32.4L35.5 42L32.6 32.4L23 29.5L32.6 26.6L35.5 17Z" fill="#FEFEFE"/>
+  <!-- Accent starlet -->
+  <circle cx="51" cy="14" r="2.6" fill="#7ca2e9"/>
+</svg>
